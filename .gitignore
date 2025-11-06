@@ -1,7 +1,6 @@
 # Python virtual environment
 venv/
 .venv/
-env/
 
 # Python cache
 __pycache__/
@@ -12,3 +11,9 @@ __pycache__/
 
 # macOS files
 .DS_Store
+
+# Ignore all saved models and test data artifacts
+models/
+
+# Ignore generated submission files
+submission.csv
