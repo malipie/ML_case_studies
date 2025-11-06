@@ -33,6 +33,11 @@ def main():
     # Apply log transform to target variable to normalize it
     y = np.log1p(df[TARGET_COLUMN])
 
+    # Save list in correct order
+    feature_list = X.columns.tolist()
+    joblib.dump(feature_list, f'{MODEL_DIR}/feature_list.pkl')
+    print("Feature list saved to models/feature_list.pkl")
+
     # 3. Identify Column Types
     # Identify numerical and categorical features
     numerical_features = X.select_dtypes(include=np.number).columns.tolist()
