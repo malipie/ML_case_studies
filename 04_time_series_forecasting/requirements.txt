@@ -1,0 +1,12 @@
+numpy<2.0
+pandas
+scikit-learn
+joblib
+plotly
+seaborn
+matplotlib
+lightgbm
+ipykernel
+nbformat
+ipywidgets
+statsmodels

@@ -18,3 +18,4 @@ models/
 # Ignore generated submission files
 submission.csv
 02_housing_price_prediction/data/test.csv
+03_housing_price_api/data/test.csv
