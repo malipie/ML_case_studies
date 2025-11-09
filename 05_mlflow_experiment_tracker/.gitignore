@@ -1,0 +1,29 @@
+# --- Python Virtual Environments ---
+# Ignore the virtual environment folder
+venv/
+.venv/
+env/
+
+# --- Python Cache Files ---
+# Ignore compiled Python files and cache
+__pycache__/
+*.pyc
+
+# --- Jupyter Notebook Checkpoints ---
+.ipynb_checkpoints/
+
+# --- macOS System Files ---
+.DS_Store
+
+# --- MLflow Specific ---
+# This is the most important rule for this project
+# Ignore the directory where MLflow stores all experiment data
+mlruns/
+# Also ignore local database files if we switch from filesystem
+*.db
+*.sqlite
+*.sqlite3
+
+# --- IDE/Editor Files ---
+.idea/
+.vscode/
