@@ -1,0 +1,26 @@
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+
+# IDE files
+.idea/
+.vscode/
+
+# --- MLflow Specific ---
+# Ignore the default filesystem log directory
+mlruns/
+
+# Ignore database-backed log files
+*.db
+*.sqlite
+*.sqlite3
