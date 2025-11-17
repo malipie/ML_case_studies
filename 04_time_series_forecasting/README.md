@@ -40,5 +40,27 @@ Replace example commands with actual script names and config paths present in th
 
 
 
+# Analysis & Key Findings
 
+After training the LGBM model, the Feature Importance plot provides several critical business insights:
+
+## 1. Sales are Driven by Trends, Not Long-Term Growth
+
+The most important features by far are rolling_mean_28 and rolling_mean_7.
+
+Business Insight: This indicates that the business is highly auto-regressive. The best predictor of future sales is the sales performance over the last 7-28 days. This suggests strong, consistent sales patterns rather than erratic spikes.
+
+The low importance of the year feature suggests there is no strong long-term upward or downward trend across the entire business.
+
+## 2. Product-Level Seasonality is Key
+
+The item ID is the third most important feature.
+
+Business Insight: This proves that different items have vastly different sales patterns (i.e., strong product-level seasonality). The model learned that it must know which item is being sold to make an accurate prediction (e.g., item 5 sells differently in summer than item 10).
+
+## 3. Location is Not a Major Factor
+
+One of the most interesting findings is the very low importance of the store feature.
+
+Business Insight: This strongly suggests that sales performance is consistent across all 10 store locations. The primary drivers of sales are the product itself and its recent trend, not where it's being sold. This could imply a uniform customer base or similar assortment and pricing strategies across all stores.
 
