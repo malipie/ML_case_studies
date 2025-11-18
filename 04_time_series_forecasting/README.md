@@ -64,3 +64,29 @@ One of the most interesting findings is the very low importance of the store fea
 
 Business Insight: This strongly suggests that sales performance is consistent across all 10 store locations. The primary drivers of sales are the product itself and its recent trend, not where it's being sold. This could imply a uniform customer base or similar assortment and pricing strategies across all stores.
 
+## 4. The Model is Conservative (Regression to the Mean)
+
+The orange trendline on the Residual Plot clearly slopes downwards.
+
+Low Sales: The model tends to over-predict (predicts higher than actual).
+
+High Sales: The model systematically under-predicts (predicts lower than actual).
+
+This indicates that the model "plays it safe" by pulling predictions towards the average. It treats extreme sales spikes as anomalies rather than predictable events.
+
+## 5. The Missing Link: Contextual Data
+
+The systematic under-prediction of high sales suggests that the model lacks the context to understand why sales suddenly spike.
+
+To improve accuracy and fix this bias, the model needs external features that drive demand, such as:
+
+- Promotions & Discounts: Data on price cuts (is_promotion, discount_depth) would explain sudden sales multipliers.
+
+- Competitor Activity: Information on competitor pricing or promotions nearby.
+
+- Local Events: Data on cultural or sporting events in the vicinity (is_event, foot_traffic) that drive impulsive buying.
+
+- Inventory Levels: Low sales might simply mean the product was out of stock, not low demand.
+
+Conclusion: The current model is excellent at predicting baseline trends based on history (lag_7, rolling_mean), but it hits a "ceiling" because it is blind to external marketing and environmental factors.
+
