@@ -62,3 +62,26 @@ Use regression metrics such as RMSE, MAE and R² to assess performance. Include 
 - Use notebooks for exploratory work and scripts for reproducible runs.
 
 
+# Analysis & Key Findings
+
+The model evaluation revealed several critical insights about the housing market and the model's performance:
+
+## 1. The Power of Log-Transformation
+
+Applying np.log1p() to the target variable (SalePrice) was crucial. Without it, the model would be heavily biased by high-priced outliers. The log-transform normalized the distribution, allowing the model to focus on relative (percentage) errors rather than absolute dollar errors, significantly improving performance across the entire price range.
+
+## 2. Expert Assessment Matters Most
+
+The Feature Importance analysis shows that OverallQual (Overall Quality) is by far the most predictive feature.
+
+Insight: This indicates that a single, expert assessment of the property's condition and finish is more valuable than dozens of raw technical metrics (like heating type or roof material). It suggests that "intangible" quality is the primary driver of value.
+
+## 3. Limitations in the Luxury Segment
+
+The Regression Plot reveals a systematic under-prediction for high-value properties (>$450k).
+
+Observation: The model performs excellently for the mass market but struggles with outliers on the high end.
+
+Reason: There are very few luxury homes in the training data, making it hard for the model to learn what drives extreme value.
+
+Recommendation: For accurate pricing of luxury estates, a separate model or manual appraisal is recommended, as this general-purpose model is too conservative for that segment.

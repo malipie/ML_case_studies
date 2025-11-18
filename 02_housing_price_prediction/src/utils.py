@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.figure_factory as ff
 import plotly.express as px
-import plotly.graph_objects as go  # <-- WAŻNY DODATEK
+import plotly.graph_objects as go
 import numpy as np
 
 def plot_regression_results(y_true, y_pred, title='Regression Results'):
