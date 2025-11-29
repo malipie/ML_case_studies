@@ -1,0 +1,20 @@
+# --- Python ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# --- Dane i Modele (Nie wysyłamy na Gita!) ---
+data/
+models/
+
+# --- Systemowe (Mac/Windows) ---
+.DS_Store
+Thumbs.db
+
+# --- Edytory (VS Code, PyCharm) ---
+.vscode/
+.idea/
+
+# --- Jupyter Notebooks ---
+.ipynb_checkpoints/
