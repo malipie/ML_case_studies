@@ -18,7 +18,7 @@ Model: Utilizes GradientBoostingRegressor for capturing non-linear relationships
 
 # Project Structure
 
-final_exam/
+07_california_hausing_price_prediction/
 ├── data/
 │   └── housing.csv          (Raw data)
 ├── models/
